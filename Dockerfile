@@ -87,7 +87,7 @@ RUN cargo install --root /usr/local --profile release --locked --path .
 ################################################################################
 # Build a smaller image just for running the `noseyparker` binary
 ################################################################################
-FROM debian:11-slim
+FROM debian:bookworm-20240513-slim
 
 COPY --from=app_builder /usr/local/bin/noseyparker /usr/local/bin/noseyparker
 
